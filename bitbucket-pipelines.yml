@@ -1,6 +1,0 @@
-image: openjdk:14
-pipelines:
-  default:
-    - step:
-        script:
-          - bash ./gradlew build

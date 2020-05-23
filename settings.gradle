@@ -1,4 +1,3 @@
-rootProject.name = 'com.nelkinda.template-multi-gradle' // TODO Change
+rootProject.name = 'com.nelkinda.systemassert'
 
-include 'lib-template'
-include 'app-template'
+include 'lib-systemassert'

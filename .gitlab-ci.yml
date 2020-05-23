@@ -1,3 +1,0 @@
-image: openjdk:14
-build:
-  script: ./gradlew build

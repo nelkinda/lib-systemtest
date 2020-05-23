@@ -27,7 +27,6 @@ ext {
     junitVersion = '4.13'
     junitJupiterVersion = '5.6.2'
     junitPlatformVersion = '1.6.2'
-    lombokVersion = '1.18.12'
     mockitoVersion = '3.3.3'
     pmdVersion = '6.23.0'
 }
@@ -45,16 +44,12 @@ configure(subprojects) {
     apply plugin: 'org.sonarqube'
     apply plugin: 'info.solidsoft.pitest'
 
-    sourceCompatibility = 14
+    sourceCompatibility = 8
 
     dependencies {
         checkstyle 'com.puppycrawl.tools:checkstyle:8.32'
 
-        annotationProcessor "org.projectlombok:lombok:$rootProject.ext.lombokVersion"
-        compileOnly "org.projectlombok:lombok:$rootProject.ext.lombokVersion"
-
-        testAnnotationProcessor "org.projectlombok:lombok:$rootProject.ext.lombokVersion"
-        testCompileOnly "org.projectlombok:lombok:$rootProject.ext.lombokVersion"
+        implementation 'org.junit.jupiter:junit-jupiter-api:5.6.2'
 
         testImplementation "io.cucumber:cucumber-java:$rootProject.ext.cucumberVersion"
         testImplementation "io.cucumber:cucumber-junit:$rootProject.ext.cucumberVersion"
@@ -104,7 +99,7 @@ configure(subprojects) {
     test.finalizedBy jacocoTestReport
 
     pitest {
-        targetClasses = ['com.nelkinda.template.*'] // TODO change
+        targetClasses = ['com.nelkinda.systemassert.*']
         pitestVersion = '1.5.2'
         timestampedReports = false
         testPlugin = 'junit5'
