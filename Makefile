@@ -13,6 +13,11 @@ all: build
 pipeline:
 	$(BUILD) $(BUILDFLAGS) build :lib-systemassert:pitest
 
+.PHONY: publish
+## Publishes the library to GitHub.
+publish:
+	$(BUILD) $(BUILDFLAGS) :lib-systemassert:publish
+
 .PHONY: continuous
 ## Builds and tests continuously.
 continuous:

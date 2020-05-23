@@ -1,6 +1,25 @@
 plugins {
     id 'java-library'
+    id 'maven-publish'
 }
 
 dependencies {
+}
+
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri('https://maven.pkg.github.com/nelkinda/lib-systemtest')
+            credentials {
+                username = project.findProperty('gpr.user') ?: System.getenv("GITHUB_USERNAME")
+                password = project.findProperty('gpr.key') ?: System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
+    publications {
+        gpr(MavenPublication) {
+            from(components.java)
+        }
+    }
 }
