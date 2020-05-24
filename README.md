@@ -4,6 +4,17 @@ A library to test JVM functions and programs behavior on `System.out`, `System.e
 
 [![GitHub CI/CD](https://github.com/nelkinda/lib-systemtest/workflows/CI/CD/badge.svg)](https://github.com/nelkinda/lib-systemtest/actions)
 
+## Target Audience
+* Developers of command line tools on the JVM.
+* Teachers and Students that work on JVM languages and want to verify assignments that operate on System.out.
+* Trainers of Test-Driven Development.
+
+## Dependencies/Requirements
+* Java 8 JRE
+* The library depends on the JUnit5 API but should work quite well also with TestNG or Cucumber.
+
+It has been developed in Java, but should also work quite nicely in other JVM-languages like Kotlin, Groovy, Scala, and Clojure.
+
 ## Example
 
 ```java
