@@ -33,7 +33,7 @@ class HelloTest {
 ```
 
 ## Reports
-The reports are available locally, after running a build using `make build pitest`
+The reports are available locally, after running a build using `make pipeline`
 
 ### `lib-systemassert`
 * [Checkstyle Report Main](lib-systemassert/build/reports/checkstyle/main.html)
@@ -55,4 +55,4 @@ The reports are available locally, after running a build using `make build pites
 * [PMD Report Test](examples/build/reports/pmd/test.html)
 * [SonarLint Report Main](examples/build/reports/sonarlint/sonarlintMain/report.html)
 * [SonarLint Report Test](examples/build/reports/sonarlint/sonarlintTest/report.html)
-* [PiTest Mutation Test Report](examples/build/reports/pitest/index.html)
+<!--* [PiTest Mutation Test Report](examples/build/reports/pitest/index.html)-->
