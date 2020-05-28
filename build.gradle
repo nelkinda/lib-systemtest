@@ -43,6 +43,7 @@ configure(subprojects) {
     apply plugin: 'name.remal.sonarlint'
     apply plugin: 'org.sonarqube'
     apply plugin: 'info.solidsoft.pitest'
+    apply plugin: 'name.remal.check-dependency-updates'
 
     sourceCompatibility = 8
 
