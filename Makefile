@@ -11,7 +11,7 @@ all: build
 .PHONY: pipeline
 ## Runs the same thing as the pipeline.
 pipeline:
-	$(BUILD) $(BUILDFLAGS) build :lib-systemassert:pitest
+	$(BUILD) $(BUILDFLAGS) checkUpdates build :lib-systemassert:pitest
 
 .PHONY: publish
 ## Publishes the library to GitHub.
